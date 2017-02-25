@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>  <!-- *** Head Starts *** -->
+          <title>Ege Ertem</title>
+           <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+             <meta name="Description" content="Berkeley Homework 4 ">
+              <meta name="author" content="Ege Ertem">
+
+               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+               <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+              
+           
+          <!-- <script type="text/javascript" src="./assets/javascript/interactive.js"></script>  -->
+
+      </head> <!-- *** Head Ends *** -->
+
+      <script type="text/javascript"> $(document).ready(function() {  
+
+         
+        /*$(".dom_character_holder").click(function(){
+        $(this).hide(); */
+    
+           // Create the objects that represents the characters via a function.
+                //instantiate object using the constructor function
+                // One object / character should have below, 
+                //Each object should also have "attack" and "counter attack" methods.
+                /* objectCuneyt {
+                      healthPoints: 100
+                      attackPower: 
+                      counterAttackPower:
+                      */
+              
+              function myCharacters (name, surname, healthPoints,attackPower,counterAttackPower,mySrc) {
+                  this.name = name;
+                  this.surname = surname;
+                  this.healthPoints = healthPoints;
+                  this.attackPower = attackPower;
+                  this.counterAttackPower = counterAttackPower;
+                  this.mySrc = mySrc;
+
+                 this.getInfo = function getInfo() {
+                  return 'This ' + this.name + ' ' +'this much'+ this.healthPoints + '.';
+
+            };
+          }
+
+
+
+
+          var cucu = new myCharacters ('Cuneyt','Arkin',120,6,10,'assets/images/cuneyt.jpeg'); 
+          var kado = new myCharacters ('Kadir','Inanir',100,6,10,'assets/images/kadir.jpeg'); 
+          var nuris = new myCharacters ('Nuri','Alco',150,6,10,'assets/images/nuri.jpeg'); 
+          var cosku = new myCharacters ('Tecavuzcu','Coskun',180,6,10,'assets/images/coskun.jpeg'); 
+          
+
+          
+         /* alert(cucu.getInfo()); //displays 'A blue Porsche boxter.' 
+          alert(kado.getInfo());
+          alert(nuris.getInfo());
+          alert(cosku.getInfo()); */ 
+          
+          var a=[];
+          var b=[];
+          a.push (cucu.name,kado.surname,nuris.healthPoints,cosku.counterAttackPower,cucu.mySrc);
+          console.log (a);
+          b.push (cucu,kado,nuris,cosku);
+          console.log(b);
+        
+          /*var myImage = new Image(170, 170);
+          myImage.src = 'assets/images/coskun.jpeg';
+          console.log(myImage.src);
+          console.log(myImage);
+
+
+            function enableTxt(elem) {
+                var id = $(elem).attr("id");
+                alert(id);
+            }
+
+          */
+
+      
+           $(document).click(function(){
+        
+           console.log(this);
+            });
+         
+         /* $(document).on("click", function() {
+
+                console.log(this.id);
+
+
+          }); */
+
+     
+/* $(document).on('click', 'span', function () {
+    alert(this.id);
+}); */
+
+     //myConstructorFunction(Cuneyt,Arkin,120,6,10);
+   // });
+
+        //Create the arrays that holds the objects / characters.
+
+        // Put the objects in to the array
+
+
+        // Select the character that you clicked on.
+
+        // Move all the characters that were not clicked to the next stage
+
+
+
+
+});
+         </script>
+    <body>
+<div class="container" >
+
+
+
+
+     <!-- *** Body Starts *** -->
+        <header> <!-- *** Header Starts *** -->
+            <nav> <!-- *** Navigation Starts *** -->
+  
+
+            </nav> <!-- *** Navigation Ends*** -->
+        </header> <!-- *** Header Ends *** -->
+
+<main> <!-- *** Main Starts *** -->
+<div class="container" >
+
+<h1 class="text-right" id="top_right"> This is not an RPG! This is for real!!!</h1>
+
+    <div class="row" > <!--Row1 -->
+ 
+    <div class="col-md-2">
+    <div class="glove">
+                 <div class="dom_character_holder" id="cuneyt">
+                <div> 
+                    <h5 class="text-center" style="margin-top: -19px;" >Cuneyt Arkin</h5>
+                     <h5 class="text-center" style="margin-top: 165px;" >120</h5>
+                </div>
+                </div>
+            </div>
+         </div>      
+         <div class="col-md-2">
+         <div class="glove">
+               <div class="dom_character_holder" id="nuri">
+                <div> 
+                    <h5 class="text-center" style="margin-top: -19px;" >Nuri Alco</h5>
+                     <h5 class="text-center" style="margin-top: 165px;" >100</h5>
+                </div>
+            </div>
+            </div>
+         </div>      
+          <div class="col-md-2">
+          <div class="glove">
+               <div class="dom_character_holder" id="coskun">
+                <div> 
+                    <h5 class="text-center" style="margin-top: -19px;" >Coskun</h5>
+                     <h5 class="text-center" style="margin-top: 165px;" >150</h5>
+                </div>
+            </div>
+         </div>   
+         </div>  
+                   <div class="col-md-2">
+         <div class="glove">
+               <div class="dom_character_holder" id="kadir">
+                <div> 
+                    <h5 class="text-center" style="margin-top: -19px;" >Kadir Inanir</h5>
+                     <h5 class="text-center" style="margin-top: 165px;" >180</h5>
+                </div>
+            </div>
+         </div>   
+         </div>  
+          <div class="col-md-4"> 
+         </div>
+         
+         </div> 
+                 <h2 class="text-left">Your character</h2>
+                 
+
+
+        
+ 
+
+    <div class="row" > <!--Row2 -->
+
+        <h2 class="text-left" id="top_right">Enemies Available to attack</h2>
+
+    </div>
+
+    <div class="row"> <!--Row3 -->
+
+        <h2 class="text-left" id="top_right"> Fight Section</h2>
+
+        <button type="button" class="btn btn-danger">ATTACK</button>
+
+        <h2 class="text-left" id="top_right"> Defender</h2>
+
+      </div>
+</div>
+
+        </main> <!-- *** Main Ends *** -->
+        
+
+
+        <footer> <!-- *** Footer Starts *** -->
+        </footer> <!-- *** Footer Ends *** -->
+     
+</div>
+    </body> <!-- *** Body Ends *** -->
+</html> <!-- *** Head Ends *** -->

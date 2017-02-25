@@ -1,0 +1,85 @@
+body {
+
+
+	background-image: url("../images/cuneyt_duvar.jpeg");
+	background-repeat: no-repeat;
+	background-size:100% auto;
+}
+
+h1,h2,h3,h4,h6 {
+
+	color: #FAFAFA;
+
+}
+h5 {
+	color: #212121;
+}
+
+
+
+ #kadir {
+
+	
+	background-image: url("../images/kadir.jpeg") ;
+	background-size: contain;
+	width: 200px;
+	height: 200px;
+	background-repeat: no-repeat;
+    border-style: solid;
+
+	border-color: white;
+	border-width: 20px;
+
+} 
+
+
+#nuri {
+
+	background-image: url("../images/nuri.jpeg") ;
+	background-size: contain;
+	width: 200px;
+	height: 200px;
+	background-repeat: no-repeat;
+    border-style: solid;
+
+	border-color: white;
+	border-width: 20px;
+
+} 
+#coskun {
+
+	background-image: url("../images/coskun.jpeg") ;
+	background-size: contain;
+	width: 200px;
+	height: 200px;
+	background-repeat: no-repeat;
+    border-style: solid;
+
+	border-color: white;
+	border-width: 20px;
+	
+} 
+#cuneyt {
+
+	background-image: url(../images/cuneyt.jpeg) ;
+	
+	width: 200px;
+	height: 200px;
+	background-repeat: no-repeat;
+    border-style: solid;
+
+	border-color: white;
+	border-width: 20px;
+	
+}
+
+.glove {
+
+	border-style: solid;
+	width: 210px;
+	border-color: green;
+	border-width: 5px;
+}
+
+
+
