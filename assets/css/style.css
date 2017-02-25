@@ -61,7 +61,7 @@ h5 {
 } 
 #cuneyt {
 
-	background-image: url(../images/cuneyt.jpeg) ;
+	background-image: url("../images/cuneyt.jpeg") ;
 	
 	width: 200px;
 	height: 200px;

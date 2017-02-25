@@ -24,6 +24,7 @@
                      hp : 120,
                      ap: 20,
                      ca: 40,
+                     image: '../images/cuneyt.jpeg',
                      attackCharacter : function(otherCharacter) {
 
                      otherCharacter.hp -= this.ap;
@@ -41,6 +42,7 @@
                      hp : 100,
                      ap: 20,
                      ca: 40,
+                     image: '../images/kadir.jpeg',
                      attackCharacter : function(otherCharacter) {
 
                      otherCharacter.hp -= this.ap;
@@ -59,7 +61,7 @@
                      ap: 20,
                      ca: 40,
                      attackCharacter : function(otherCharacter) {
-
+                    image: '../images/nuri.jpeg',
                      otherCharacter.hp -= this.ap;
 
                     return nuriBat;
@@ -75,7 +77,7 @@
                      ap: 20,
                      ca: 40,
                      attackCharacter : function(otherCharacter) {
-
+                     image: '../images/coskun.jpeg',
                      otherCharacter.hp -= this.ap;
 
                     return coskunBat;
@@ -93,11 +95,32 @@
               
            $('.dom_character_holder').click(function(){  
         
+                        
+             // $('.dom_character_holder').not(this).each(function(){
+              
+              /* $("#Row2").html(this); */ 
 
+             //});
+
+                //Move objects to second row
+
+                /*function appendBattals() {
+                          // Create text with HTML
+    
+                  $("#Row2").append($(this).html());     // Append new elements
+                }
+                appendBattals(); */
+
+
+                
+             
+            
+              
+           
 
            
 
-           if (arrayBat[0].name == this.id) {
+           if (arrayBat[0].name === this.id) {
            
               var x = 0; 
 
@@ -105,36 +128,115 @@
               
           
 
-              if (arrayBat[1].name == this.id) {
+              if (arrayBat[1].name === this.id) {
            
               var x = 1; 
               }
 
-                 if (arrayBat[2].name == this.id) {
+                 if (arrayBat[2].name === this.id) {
            
                var x = 2; 
                }
 
-              if (arrayBat[3].name == this.id) {
+              if (arrayBat[3].name === this.id) {
            
                var x = 3; 
                }
 
                 arrayBat.splice(x,1); 
 
+                
                
+
+             // <div class="col-md-2" id="column1"  >
+        
+              // </div>
+
+               $("#column1").html($('#' + arrayBat[0].name)); 
+               $("#column2").html($('#' + arrayBat[1].name)); 
+               $("#column3").html($('#' + arrayBat[2].name)); 
+
+               
+
+                function changeBorder() {
+               $(".glove").css({'border' : '0px black solid'});
+               }
+               changeBorder();
+
+               var newArray = [cuneytBat, kadirBat, nuriBat, coskunBat];
+
+               var myBat = newArray[x];
+
+               // if myBat hp is not smaller than 0
+
+                   //click on an enemy to select. 
+
+                     //Click on Attack in order to attack.
+
+                     // Have my bat to attack to the enemy that is seleceted. 
+
+                     // 
+
+
+
+              
+
+            
+              
+             
+
+   
+
+
+
+
+
+
+               //Select an enemy
+
+               //attack to enemy
+
+               // if enemey wins then fight and battle is lost
+                    //Else Battal wins the fight 
+              //if battal wins all and no enemy is left battal wins. 
+
+              // If there is enemy then it is back to state 2
+
+
+
+
+
+
+
 
           }); 
 
-
+        
+        
+        
+              
    
-   
 
 
-        // Move all the characters that were not clicked to the next stage
+       
 
 });   // **** Document ready closed
          </script>
+
+         <script type="text/javascript"> $(document).ready(function() {  
+
+        
+           
+ $('.dom_character_holder').click(function(){ 
+
+         console.log(this);
+
+
+         } ); 
+ }); 
+         </script>
+
+        
     <body>
 <div class="container" >
 
@@ -207,9 +309,32 @@
         
  
 
-    <div class="row" > <!--Row2 -->
+    <div class="row" id="Row2"> <!--Row2 -->
 
         <h2 class="text-left" id="top_right">Enemies Available to attack</h2>
+
+        <div class="col-md-2" id="column1"  >
+        
+         </div>
+    
+         <div class="col-md-2"  id="column2">
+         
+         </div>     
+
+          <div class="col-md-2" id="column3">
+          
+         </div>  
+         
+         <div class="col-md-2">
+         
+         </div>  
+         
+         <div class="col-md-4"> 
+      
+         
+         </div> 
+  
+
 
     </div>
 

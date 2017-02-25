@@ -1,28 +1,99 @@
 States of the game:
   
 
-  Varaibles that define the states:
+ Varaibles that define the states:
+
+arrayHoldingCharacters
+
+objectCuneyt
+objectKadir
+objectCoskun
+objectNuri
+
+
+  S_init:
+
+arrayHoldingCharacters = [objectCuneyt,objectKadir,objectCoskun,objectNuri];
+
+objectCuneyt {
+  healthPoints: 100
+  attackPower: 
+  counterAttackPower:
+
+
+}
+objectKadir {
+	
+  healthPoints: 120
+  attackPower: 
+  counterAttackPower:
+}
+
+
+objectCoskun { 
+  healthPoints: 180 
+  attackPower: 
+  counterAttackPower:
+}
+objectNuri {
+	
+  healthPoints: 150
+  attackPower: 
+  counterAttackPower:
+
+
+}
+
 
   
+  S_gameOn:
 
 
 
+  S_lost:
+selectedObject.healthPoints <= 0; 
 
 
-  Initial_State:
-  
-  Game_On:
 
-  Lost:
+  S_wonFight:
+selectedObject.healthPoints > 0;
+all other healthPoints <= 0;
+one or more character enemeies left.
+the enemy healthPoint <= 0; 
 
-  Won:
+
+  S_wonBattle: 
+
+selectedObject.healthPoints > 0;
+all other healthPoints <= 0;
+
+
+
+Transitions:
+
+Transition conditions:
+
+State
+
+State with activities and methods..... 
+
+
 
 Explanation of the transitions. 
 Transition conditions.
 What hapens in the transitions. 
 
 
+
+
+
+
+
   Objects: 
+
+  healthPoints: starting HPs are static, it is displayed at the top of picture and it is lowered by the attackPower or counterAttackPower
+  attackPower: it increases by the attack. (#ofattack x AP);
+  counterAttackPower: this is static;
 
 
 Here's how the app works:
@@ -47,3 +118,32 @@ The Health Points, Attack Power and Counter Attack Power of each character must 
 No characters in the game can heal or recover Health Points.
 A winning player must pick their characters wisely by first fighting an enemy with low Counter Attack Power. This will allow them to grind Attack Power and to take on enemies before they lose all of their Health Points. Healing options would mess with this dynamic.
 Your players should be able to win and lose the game no matter what character they choose. The challenge should come from picking the right enemies, not choosing the strongest player.
+
+
+
+         <div class="col-md-2" >
+        
+         </div>
+    
+         <div class="col-md-2">
+         
+         </div>     
+
+          <div class="col-md-2">
+          
+         </div>  
+         
+         <div class="col-md-2">
+         
+         </div>  
+         
+         <div class="col-md-4"> 
+      
+         
+         </div> 
+  
+                 
+
+
+        
+
