@@ -17,105 +17,123 @@
 
       </head> <!-- *** Head Ends *** -->
 
-      <script type="text/javascript"> $(document).ready(function() {  
-
+      <script type="text/javascript"> $(document).ready(function() {           // **** Document ready open     
          
-        /*$(".dom_character_holder").click(function(){
-        $(this).hide(); */
-    
-           // Create the objects that represents the characters via a function.
-                //instantiate object using the constructor function
-                // One object / character should have below, 
-                //Each object should also have "attack" and "counter attack" methods.
-                /* objectCuneyt {
-                      healthPoints: 100
-                      attackPower: 
-                      counterAttackPower:
-                      */
+          var cuneytBat = {
+                     name: "cuneyt",
+                     hp : 120,
+                     ap: 20,
+                     ca: 40,
+                     attackCharacter : function(otherCharacter) {
+
+                     otherCharacter.hp -= this.ap;
+
+                    return cuneytBat;
+                  },
+                  };
+
+           
+                 
               
-              function myCharacters (name, surname, healthPoints,attackPower,counterAttackPower,mySrc) {
-                  this.name = name;
-                  this.surname = surname;
-                  this.healthPoints = healthPoints;
-                  this.attackPower = attackPower;
-                  this.counterAttackPower = counterAttackPower;
-                  this.mySrc = mySrc;
 
-                 this.getInfo = function getInfo() {
-                  return 'This ' + this.name + ' ' +'this much'+ this.healthPoints + '.';
+          var kadirBat = {
+                     name: "kadir",
+                     hp : 100,
+                     ap: 20,
+                     ca: 40,
+                     attackCharacter : function(otherCharacter) {
 
-            };
-          }
+                     otherCharacter.hp -= this.ap;
+
+                    return kadirBat;
+                  },
+                  };
+
+           
+                     
+                
+
+          var nuriBat = {
+                     name: "nuri",
+                     hp : 150,
+                     ap: 20,
+                     ca: 40,
+                     attackCharacter : function(otherCharacter) {
+
+                     otherCharacter.hp -= this.ap;
+
+                    return nuriBat;
+                  },
+                  };
+
+           
+                 
+            
+            var coskunBat = {
+                     name: "coskun",
+                     hp : 180,
+                     ap: 20,
+                     ca: 40,
+                     attackCharacter : function(otherCharacter) {
+
+                     otherCharacter.hp -= this.ap;
+
+                    return coskunBat;
+                  },
+                  };
+        //Create the arrays that holds the objects / characters.         Put the objects in to the array
+
+           
+                 var arrayBat = [cuneytBat, kadirBat, nuriBat, coskunBat];
+
+                 
 
 
 
-
-          var cucu = new myCharacters ('Cuneyt','Arkin',120,6,10,'assets/images/cuneyt.jpeg'); 
-          var kado = new myCharacters ('Kadir','Inanir',100,6,10,'assets/images/kadir.jpeg'); 
-          var nuris = new myCharacters ('Nuri','Alco',150,6,10,'assets/images/nuri.jpeg'); 
-          var cosku = new myCharacters ('Tecavuzcu','Coskun',180,6,10,'assets/images/coskun.jpeg'); 
-          
-
-          
-         /* alert(cucu.getInfo()); //displays 'A blue Porsche boxter.' 
-          alert(kado.getInfo());
-          alert(nuris.getInfo());
-          alert(cosku.getInfo()); */ 
-          
-          var a=[];
-          var b=[];
-          a.push (cucu.name,kado.surname,nuris.healthPoints,cosku.counterAttackPower,cucu.mySrc);
-          console.log (a);
-          b.push (cucu,kado,nuris,cosku);
-          console.log(b);
+              
+           $('.dom_character_holder').click(function(){  
         
-          /*var myImage = new Image(170, 170);
-          myImage.src = 'assets/images/coskun.jpeg';
-          console.log(myImage.src);
-          console.log(myImage);
 
 
-            function enableTxt(elem) {
-                var id = $(elem).attr("id");
-                alert(id);
-            }
+           
 
-          */
+           if (arrayBat[0].name == this.id) {
+           
+              var x = 0; 
 
-      
-           $(document).click(function(){
-        
-           console.log(this);
-            });
-         
-         /* $(document).on("click", function() {
+           } 
+              
+          
 
-                console.log(this.id);
+              if (arrayBat[1].name == this.id) {
+           
+              var x = 1; 
+              }
+
+                 if (arrayBat[2].name == this.id) {
+           
+               var x = 2; 
+               }
+
+              if (arrayBat[3].name == this.id) {
+           
+               var x = 3; 
+               }
+
+                arrayBat.splice(x,1); 
+
+               
+
+          }); 
 
 
-          }); */
+   
+   
 
-     
-/* $(document).on('click', 'span', function () {
-    alert(this.id);
-}); */
-
-     //myConstructorFunction(Cuneyt,Arkin,120,6,10);
-   // });
-
-        //Create the arrays that holds the objects / characters.
-
-        // Put the objects in to the array
-
-
-        // Select the character that you clicked on.
 
         // Move all the characters that were not clicked to the next stage
 
-
-
-
-});
+});   // **** Document ready closed
          </script>
     <body>
 <div class="container" >
@@ -142,7 +160,7 @@
     <div class="glove">
                  <div class="dom_character_holder" id="cuneyt">
                 <div> 
-                    <h5 class="text-center" style="margin-top: -19px;" >Cuneyt Arkin</h5>
+                    <h5 class="text-center" style="margin-top: -19px;" >Cuneyt</h5>
                      <h5 class="text-center" style="margin-top: 165px;" >120</h5>
                 </div>
                 </div>
@@ -150,9 +168,9 @@
          </div>      
          <div class="col-md-2">
          <div class="glove">
-               <div class="dom_character_holder" id="nuri">
+               <div class="dom_character_holder" id="kadir">
                 <div> 
-                    <h5 class="text-center" style="margin-top: -19px;" >Nuri Alco</h5>
+                    <h5 class="text-center" style="margin-top: -19px;" >Kadir</h5>
                      <h5 class="text-center" style="margin-top: 165px;" >100</h5>
                 </div>
             </div>
@@ -160,9 +178,9 @@
          </div>      
           <div class="col-md-2">
           <div class="glove">
-               <div class="dom_character_holder" id="coskun">
+               <div class="dom_character_holder" id="nuri">
                 <div> 
-                    <h5 class="text-center" style="margin-top: -19px;" >Coskun</h5>
+                    <h5 class="text-center" style="margin-top: -19px;" >Nuri</h5>
                      <h5 class="text-center" style="margin-top: 165px;" >150</h5>
                 </div>
             </div>
@@ -170,9 +188,9 @@
          </div>  
                    <div class="col-md-2">
          <div class="glove">
-               <div class="dom_character_holder" id="kadir">
+               <div class="dom_character_holder" id="coskun">
                 <div> 
-                    <h5 class="text-center" style="margin-top: -19px;" >Kadir Inanir</h5>
+                    <h5 class="text-center" style="margin-top: -19px;" >Coskun</h5>
                      <h5 class="text-center" style="margin-top: 165px;" >180</h5>
                 </div>
             </div>
